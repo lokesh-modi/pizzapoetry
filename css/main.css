@@ -1636,4 +1636,12 @@ body {
   .xl\:tracking-\[-0\.75rem\] {
     letter-spacing: -0.75rem;
   }
+
+  .xl\:tracking-\[-rem\] {
+    letter-spacing: -rem;
+  }
+
+  .xl\:tracking-\[-1rem\] {
+    letter-spacing: -1rem;
+  }
 }

@@ -2,24 +2,113 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Poetry – Artisan Pizza in Adajan, Surat | Dine-In Restaurant</title>
-    <meta name="description"
-        content="Experience artisan pizza crafted with passion at Pizza Poetry, Adajan's premium dine-in restaurant. Reserve your table today at Pal RTO, Surat.">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+  <!-- BASIC -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <script type="module" async
-        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fpizzapoet9078back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.15"></script>
-    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+  <!-- TITLE (Primary Ranking Signal) -->
+  <title>Pizza Poetry | Artisan Pizza Restaurant in Adajan, Surat (Dine-In)</title>
+
+  <!-- META DESCRIPTION (CTR Optimization) -->
+  <meta name="description"
+    content="Pizza Poetry is a premium artisan pizza restaurant in Adajan, Surat. Experience hand-crafted sourdough pizzas, Italian dishes & a warm dine-in ambience near Pal RTO. Reserve your table today.">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pizza Poetry | Artisan Pizza Restaurant in Adajan, Surat">
+  <meta name="twitter:description"
+    content="Discover Pizza Poetry, a premium dine-in pizza restaurant in Adajan, Surat. Hand-crafted sourdough pizzas, Italian classics & a warm ambience.">
+  <meta name="twitter:image" content="https://pizzapoetry.in/assets/twitter.png">
+  <meta name="twitter:image:alt" content="Pizza Poetry – Artisan Pizza Restaurant in Surat">
+  <meta name="twitter:site" content="@PizzaPoetry">
+
+
+  <!-- KEYWORDS (Low weight, still useful for niche/local) -->
+  <meta name="keywords"
+    content="Pizza Poetry, pizza restaurant in Adajan, best pizza in Surat, artisan pizza Surat, dine in pizza Pal RTO, sourdough pizza Surat">
+
+  <!-- CANONICAL (Critical for SEO hygiene) -->
+  <link rel="canonical" href="https://pizzapoetry.in/">
+
+  <!-- ROBOTS -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- LOCAL BUSINESS GEO TAGS -->
+  <meta name="geo.region" content="IN-GJ">
+  <meta name="geo.placename" content="Adajan, Surat">
+  <meta name="geo.position" content="21.1819579;72.776801">
+  <meta name="ICBM" content="21.1819579, 72.776801">
+
+  <!-- OPEN GRAPH (FACEBOOK, WHATSAPP) -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Pizza Poetry – Artisan Pizza Restaurant in Surat">
+  <meta property="og:description"
+    content="Discover Pizza Poetry, a premium dine-in pizza restaurant in Adajan, Surat. Hand-crafted sourdough pizzas, Italian classics & a welcoming ambience.">
+  <meta property="og:url" content="https://pizzapoetry.in/">
+  <meta property="og:site_name" content="Pizza Poetry">
+  <meta property="og:image" content="https://pizzapoetry.in/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pizza Poetry | Artisan Pizza in Adajan, Surat">
+  <meta name="twitter:description"
+    content="Premium dine-in pizza restaurant in Surat serving artisan sourdough pizzas and Italian classics.">
+  <meta name="twitter:image" content="https://pizzapoetry.in/assets/og-image.jpg">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- PRECONNECT (PERFORMANCE) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- GSAP (Deferred for Performance) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- STRUCTURED DATA (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Pizza Poetry",
+    "image": "https://pizzapoetry.in/assets/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2-3, Sangini Aspire, Pal RTO, Hazira Road, Beside Sanskruti Township Pal",
+      "addressLocality": "Adajan",
+      "addressRegion": "Gujarat",
+      "postalCode": "394510",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.1819579,
+      "longitude": 72.776801
+    },
+    "telephone": "+91-6354045392",
+    "servesCuisine": ["Pizza", "Italian"],
+    "priceRange": "₹₹",
+    "url": "https://pizzapoetry.in/",
+    "acceptsReservations": true
+  }
+  </script>
+
+  <!-- ANALYTICS / TRACKING (Loaded Async) -->
 </head>
+
 
 <body class="bg-charcoal text-cream overflow-x-hidden">
 

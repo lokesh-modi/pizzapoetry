@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables */
+:root {
+    --charcoal: #0a0a0a;
+    --charcoal-light: #1a1a1a;
+    --cream: #fef3c7;
+    --burnt-orange: #d97706;
+    --basil-green: #16a34a;
+}
+
+/* Base Styles */
+@layer base {
+    body {
+        font-family: 'DM Sans', sans-serif;
+        background-color: var(--charcoal);
+        color: var(--cream);
+    }
+
+    .font-newsreader {
+        font-family: 'Newsreader', serif;
+    }
+
+    .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+    }
+}
+
+/* Component Styles */
+@layer components {
+    /* Buttons */
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-8 py-3 bg-burnt-orange text-charcoal font-semibold text-sm rounded-sm hover:bg-opacity-90 transition-all duration-300 hover:scale-105 active:scale-95;
+    }
+
+    .btn-primary-large {
+        @apply inline-flex items-center justify-center px-10 py-4 bg-burnt-orange text-charcoal font-semibold text-base rounded-sm hover:bg-opacity-90 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-burnt-orange/20;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-8 py-3 bg-transparent border border-cream/20 text-cream font-semibold text-sm rounded-sm hover:bg-cream/5 hover:border-cream/40 transition-all duration-300;
+    }
+
+    .btn-secondary-large {
+        @apply inline-flex items-center justify-center px-10 py-4 bg-transparent border-2 border-cream/20 text-cream font-semibold text-base rounded-sm hover:bg-cream/5 hover:border-cream/40 transition-all duration-300;
+    }
+
+    /* Spotlight Card Effect */
+    .spotlight-card {
+        position: relative;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.02);
+        overflow: hidden;
+        padding: 2rem;
+        --mouse-x: 0px;
+        --mouse-y: 0px;
+    }
+
+    .spotlight-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: radial-gradient(
+            800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(217, 119, 6, 0.4),
+            transparent 40%
+        );
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .spotlight-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(225deg, rgba(217,119,6,0.1), rgba(254,243,199,0.05));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .spotlight-card:hover::before {
+        opacity: 1;
+    }
+
+    /* Grid Background Pattern */
+    .bg-grid-pattern {
+        background-image: linear-gradient(to right, rgba(217,119,6,0.03) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(217,119,6,0.03) 1px, transparent 1px);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 0;
+    }
+
+    .mask-pattern {
+        mask-image: repeating-linear-gradient(to right, black 0px, black 3px, transparent 3px, transparent 8px),
+                    repeating-linear-gradient(to bottom, black 0px, black 3px, transparent 3px, transparent 8px),
+                    radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+        -webkit-mask-image: repeating-linear-gradient(to right, black 0px, black 3px, transparent 3px, transparent 8px),
+                            repeating-linear-gradient(to bottom, black 0px, black 3px, transparent 3px, transparent 8px),
+                            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+        mask-composite: intersect;
+        -webkit-mask-composite: source-in;
+    }
+
+    /* Map Container */
+    .map-container {
+        width: 100%;
+        height: 450px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Animations */
+@layer utilities {
+    /* Vertical Cut Reveal Styles */
+    .vertical-cut-reveal {
+        display: flex;
+        flex-wrap: wrap;
+        white-space: pre-wrap;
+    }
+
+    .vcr-word {
+        display: inline-flex;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .vcr-char-wrapper {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .vcr-char {
+        display: inline-block;
+        transform: translateY(100%);
+        will-change: transform;
+    }
+
+    /* Fade In Animation */
+    @keyframes animationIn {
+        0% { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+        100% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+    }
+
+    .animate-fade-in {
+        animation: animationIn 0.8s ease-out both;
+    }
+
+    /* Beam Animation */
+    @keyframes beam-drop {
+        0% { top: -100px; opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { top: 100%; opacity: 0; }
+    }
+
+    .beam {
+        position: absolute;
+        width: 1px;
+        height: 150px;
+        background: linear-gradient(to bottom, transparent, rgba(217,119,6,0.5), transparent);
+        animation: beam-drop 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .beam-delay-1 {
+        animation-delay: 2s;
+    }
+
+    .beam-delay-2 {
+        animation-delay: 4s;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .map-container {
+        height: 300px;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--burnt-orange);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b45309;
+}

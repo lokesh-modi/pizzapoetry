@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Poetry – Artisan Pizza in Adajan, Surat | Dine-In Restaurant</title>
+    <meta name="description"
+        content="Experience artisan pizza crafted with passion at Pizza Poetry, Adajan's premium dine-in restaurant. Reserve your table today at Pal RTO, Surat.">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <script type="module" async
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fpizzapoet9078back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.15"></script>
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+</head>
+
+<body class="bg-charcoal text-cream overflow-x-hidden">
+
+    <!-- SVG Clip Paths -->
+    <svg class="absolute -top-[999px] -left-[999px] w-0 h-0" aria-hidden="true">
+        <defs>
+            <clipPath id="pizza-slice" clipPathUnits="objectBoundingBox">
+                <path d="M0.5,0.1 L0.9,0.9 L0.1,0.9 Z" />
+            </clipPath>
+            <clipPath id="organic-shape" clipPathUnits="objectBoundingBox">
+                <path
+                    d="M0.434125 0.00538712C0.56323 -0.00218488 0.714575 -0.000607013 0.814404 0.00302954L0.802642 0.163537C0.813884 0.167475 0.824927 0.172002 0.835358 0.177236C0.869331 0.194281 0.909224 0.225945 0.90824 0.27348C0.907177 0.324883 0.858912 0.354946 0.822651 0.36933C0.857426 0.376783 0.894591 0.387558 0.925837 0.404287C0.968002 0.426862 1.00569 0.464702 0.999287 0.515878C0.993163 0.564818 0.950731 0.597642 0.904098 0.615682C0.88204 0.624216 0.858239 0.62992 0.834803 0.633808C0.858076 0.639299 0.881603 0.646639 0.90267 0.656757C0.946271 0.677698 0.986875 0.715485 0.978905 0.768037C0.972241 0.811979 0.93615 0.843109 0.895204 0.862035C0.858032 0.879217 0.815169 0.887544 0.778534 0.892219C0.704792 0.901628 0.614366 0.901003 0.535183 0.899176C0.508115 0.898551 0.482286 0.89779 0.45773 0.897065C0.404798 0.895504 0.357781 0.894117 0.317008 0.894657C0.301552 0.894862 0.289265 0.895348 0.279749 0.895976C0.251913 0.937168 0.226467 0.980907 0.216015 1L0 0.941216C0.0140558 0.915539 0.051354 0.851547 0.0902557 0.797766C0.118421 0.758828 0.1722 0.745373 0.200402 0.740217C0.168437 0.733484 0.134299 0.723597 0.105102 0.708076C0.0614715 0.684884 0.0263696 0.64687 0.0325498 0.596965C0.0385804 0.548267 0.0803829 0.515256 0.12709 0.496909C0.146901 0.489127 0.168128 0.483643 0.189242 0.479724C0.163739 0.476035 0.137977 0.471053 0.115188 0.463936C0.0874831 0.455285 0.00855855 0.424854 0.016569 0.357817C0.0231721 0.302559 0.0838593 0.276249 0.116031 0.266164C0.149646 0.255625 0.188201 0.2505 0.221821 0.247468C0.208809 0.243824 0.195905 0.239492 0.183801 0.234287C0.152543 0.220846 0.101565 0.189547 0.105449 0.136312C0.108467 0.0949629 0.144168 0.0682612 0.171101 0.0543099C0.197578 0.0405945 0.227933 0.032236 0.25348 0.0267029C0.305656 0.0154021 0.370636 0.00911076 0.434125 0.00538712Z"
+                    fill="black" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-charcoal/90 backdrop-blur-xl border-b border-cream/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex h-20 items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 animate-fade-in">
+                <div class="w-8 h-8 bg-burnt-orange rounded-full flex items-center justify-center">
+                    <span class="text-charcoal font-bold text-sm">PP</span>
+                </div>
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-cream">Pizza Poetry</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 animate-fade-in" style="animation-delay: 0.1s;">
+                <a href="#about" class="text-sm text-cream/60 hover:text-cream transition-colors">About</a>
+                <a href="#menu" class="text-sm text-cream/60 hover:text-cream transition-colors">Menu</a>
+                <a href="#ambience" class="text-sm text-cream/60 hover:text-cream transition-colors">Ambience</a>
+                <a href="#location" class="text-sm text-cream/60 hover:text-cream transition-colors">Visit</a>
+            </div>
+
+            <div class="flex items-center gap-4 animate-fade-in" style="animation-delay: 0.2s;">
+                <a href="tel:06354045392"
+                    class="text-sm text-cream/60 hover:text-cream transition-colors hidden sm:block">Call Now</a>
+                <a href="https://www.google.com/maps/reserve/v/dine/c/SbYn0kQzG3s" target="_blank" rel="noopener"
+                    class="btn-primary">
+                    Book Table
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen relative overflow-hidden pt-20 flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1732827097362-dd88dd5277f1"
+                alt="Artisan pizza with fresh ingredients on rustic wooden table at Pizza Poetry restaurant"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-charcoal/95 via-charcoal/80 to-charcoal"></div>
+        </div>
+
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 z-10 bg-grid-pattern mask-pattern pointer-events-none"></div>
+
+        <!-- Beam Animations -->
+        <div class="absolute inset-0 flex justify-between pointer-events-none z-10 px-6 md:px-12 lg:px-24">
+            <div class="relative w-px h-full bg-cream/5 overflow-hidden">
+                <div class="beam"></div>
+            </div>
+            <div class="relative w-px h-full bg-cream/5 hidden md:block overflow-hidden">
+                <div class="beam beam-delay-1"></div>
+            </div>
+            <div class="relative w-px h-full bg-cream/5 overflow-hidden">
+                <div class="beam beam-delay-2"></div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full py-20">
+            <div class="relative">
+                <p class="text-xs absolute -top-6 left-20 font-medium tracking-wider text-burnt-orange animate-fade-in">
+                    EST. 2024
+                </p>
+                <h1
+                    class="z-20 relative font-bold text-center tracking-tight text-7xl md:text-9xl xl:text-[10rem] xl:tracking-[-0.75rem] md:tracking-[-14px] vertical-cut-reveal font-newsreader word-spacing-wide">
+                    PIZZA POETRY
+                </h1>
+
+
+                <p class="text-3xl md:text-4xl absolute -bottom-12 right-12 md:right-24 font-light italic tracking-[4px] text-cream/60 animate-fade-in font-newsreader"
+                    style="animation-delay: 0.4s;">
+                    Adajan, Surat
+                </p>
+            </div>
+
+            <div class="mt-32 md:mt-40">
+                <p class="mx-auto max-w-2xl text-center text-base md:text-lg font-medium tracking-wide text-cream/70 leading-relaxed animate-fade-in"
+                    style="animation-delay: 0.6s;">
+                    WHERE EVERY SLICE TELLS A STORY
+                    <br />
+                    ARTISAN PIZZA CRAFTED WITH PASSION
+                    <br />
+                    IN SURAT'S FINEST DINE-IN EXPERIENCE
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 pt-12 animate-fade-in"
+                style="animation-delay: 0.8s;">
+                <a href="https://www.google.com/maps/reserve/v/dine/c/SbYn0kQzG3s" target="_blank" rel="noopener"
+                    class="btn-primary-large">
+                    Reserve Your Table
+                </a>
+                <a href="https://www.google.com/viewer/chooseprovider?mid=/g/11lnplk_28&orderType=1" target="_blank"
+                    rel="noopener" class="btn-secondary-large">
+                    Order Online
+                </a>
+            </div>
+
+            <div class="mt-24 flex justify-center gap-16 animate-fade-in" style="animation-delay: 1s;">
+                <div>
+                    <div class="text-xs uppercase tracking-[0.2em] text-cream/40 mb-2 font-medium">Location</div>
+                    <div class="text-4xl italic text-burnt-orange font-newsreader">Adajan</div>
+                </div>
+                <div>
+                    <div class="text-xs uppercase tracking-[0.2em] text-cream/40 mb-2 font-medium">Call Us</div>
+                    <a href="tel:06354045392"
+                        class="text-4xl italic text-burnt-orange font-newsreader hover:text-cream transition-colors">
+                        8156008639
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-32 px-6 md:px-12 bg-charcoal-light overflow-hidden">
+        <div class="absolute inset-0 z-0 pointer-events-none"
+            style="background-image: radial-gradient(125% 125% at 50% 90%, #0a0a0a 40%, #1a0f0a 100%);"></div>
+        <div
+            class="absolute inset-0 z-0 pointer-events-none bg-[linear-gradient(to_right,rgba(217,119,6,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(217,119,6,0.03)_1px,transparent_1px)] bg-[size:70px_70px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_100%,#000_70%,transparent_110%)]">
+        </div>
+
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <div class="text-burnt-orange text-xs font-semibold uppercase mb-6 flex items-center justify-center gap-2 animate-on-scroll"
+                data-anim="fade-up">
+                Our Story
+            </div>
+
+            <!-- <h2 class="text-4xl md:text-5xl font-medium text-cream mb-8 text-center leading-tight vertical-cut-reveal font-newsreader italic"
+                data-stagger="0.2">
+                A Legacy of Passion, Crafted in Every Slice
+            </h2> -->
+            <h2
+                class="text-4xl md:text-5xl font-medium text-cream mb-8 text-center leading-tight vertical-cut-reveal font-newsreader italic word-spacing-wide">
+                A Legacy of Passion, Crafted in Every Slice
+            </h2>
+
+
+            <div class="space-y-6 text-cream/60 text-center leading-relaxed animate-on-scroll" data-anim="fade-up"
+                data-delay="0.2">
+                <p>
+                    At Pizza Poetry, we believe pizza is more than food—it's an art form. Every pizza we create begins
+                    with hand-selected ingredients, from sun-ripened tomatoes to artisan mozzarella, all sourced with
+                    care and respect for tradition.
+                </p>
+                <p>
+                    Our wood-fired oven breathes life into each dough, transforming simple ingredients into culinary
+                    poetry. This isn't fast food. This is slow craft, patient technique, and a dedication to flavors
+                    that speak for themselves.
+                </p>
+                <p>
+                    Located in the heart of Adajan, Surat, we've created a space where warmth meets elegance—a place to
+                    gather, savor, and celebrate the simple joy of exceptional pizza.
+                </p>
+            </div>
+
+            <div class="flex justify-center mt-12 animate-on-scroll" data-anim="fade-up" data-delay="0.6">
+                <a href="#menu" class="btn-secondary">
+                    Explore Our Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Pizzas Section -->
+    <section id="menu" class="relative py-32 px-6 md:px-12 bg-charcoal">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <div class="text-burnt-orange text-xs font-semibold uppercase mb-4 animate-on-scroll"
+                    data-anim="fade-up">
+                    Signature Selections
+                </div>
+                <h2 class="text-5xl md:text-6xl font-medium text-cream mb-6 animate-on-scroll font-newsreader italic"
+                    data-anim="fade-up" data-delay="0.1">
+                    Our Artisan <span class="text-cream/40">Creations</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pizza 1 -->
+                <div class="spotlight-card group animate-on-scroll" data-anim="fade-up" data-delay="0.2">
+                    <div class="relative z-10 overflow-hidden rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1615192606904-9cee34bf93c4"
+                            alt="Margherita Classica pizza with buffalo mozzarella and fresh basil leaves"
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                            style="clip-path: url(#organic-shape);">
+                    </div>
+                    <div class="pt-6">
+                        <h3 class="text-2xl text-cream mb-3 font-newsreader italic">Margherita Classica</h3>
+                        <p class="text-sm text-cream/50 leading-relaxed">San Marzano tomatoes, buffalo mozzarella,
+                            hand-picked basil, extra virgin olive oil</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 2 -->
+                <div class="spotlight-card group animate-on-scroll" data-anim="fade-up" data-delay="0.3">
+                    <div class="relative z-10 overflow-hidden rounded-sm">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1aa1068f4-1766170646677.png"
+                            alt="Quattro Formaggi pizza with four artisan cheeses and truffle oil"
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                            style="clip-path: url(#organic-shape);">
+                    </div>
+                    <div class="pt-6">
+                        <h3 class="text-2xl text-cream mb-3 font-newsreader italic">Quattro Formaggi</h3>
+                        <p class="text-sm text-cream/50 leading-relaxed">Gorgonzola, fontina, parmigiano, mozzarella,
+                            finished with white truffle oil</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 3 -->
+                <div class="spotlight-card group animate-on-scroll" data-anim="fade-up" data-delay="0.4">
+                    <div class="relative z-10 overflow-hidden rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1637574411826-4b6e787fc267"
+                            alt="Prosciutto e Rucola pizza with aged prosciutto and arugula"
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                            style="clip-path: url(#organic-shape);">
+                    </div>
+                    <div class="pt-6">
+                        <h3 class="text-2xl text-cream mb-3 font-newsreader italic">Prosciutto e Rucola</h3>
+                        <p class="text-sm text-cream/50 leading-relaxed">Aged prosciutto di Parma, fresh arugula, shaved
+                            parmesan, balsamic reduction</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 4 -->
+                <div class="spotlight-card group animate-on-scroll" data-anim="fade-up" data-delay="0.5">
+                    <div class="relative z-10 overflow-hidden rounded-sm">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_107b3b30f-1765319154480.png"
+                            alt="Diavola pizza with spicy salami and chili oil"
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                            style="clip-path: url(#organic-shape);">
+                    </div>
+                    <div class="pt-6">
+                        <h3 class="text-2xl text-cream mb-3 font-newsreader italic">Diavola</h3>
+                        <p class="text-sm text-cream/50 leading-relaxed">Spicy salami, fresh chili, red onion,
+                            mozzarella, finished with calabrian chili oil</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 5 -->
+                <div class="spotlight-card group animate-on-scroll" data-anim="fade-up" data-delay="0.6">
+                    <div class="relative z-10 overflow-hidden rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1694428322036-297444476076"
+                            alt="Funghi e Tartufo pizza with wild mushrooms and truffle cream"
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                            style="clip-path: url(#organic-shape);">
+                    </div>
+                    <div class="pt-6">
+                        <h3 class="text-2xl text-cream mb-3 font-newsreader italic">Funghi e Tartufo</h3>
+                        <p class="text-sm text-cream/50 leading-relaxed">Wild mushroom medley, truffle cream, thyme,
+                            mozzarella, porcini dust</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 6 -->
+                <div class="spotlight-card group animate-on-scroll" data-anim="fade-up" data-delay="0.7">
+                    <div class="relative z-10 overflow-hidden rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1673720366349-5c0a8ea1e7a2"
+                            alt="Burrata e Pomodorini pizza with creamy burrata and cherry tomatoes"
+                            class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                            style="clip-path: url(#organic-shape);">
+                    </div>
+                    <div class="pt-6">
+                        <h3 class="text-2xl text-cream mb-3 font-newsreader italic">Burrata e Pomodorini</h3>
+                        <p class="text-sm text-cream/50 leading-relaxed">Creamy burrata, roasted cherry tomatoes, fresh
+                            basil pesto, pine nuts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambience Section -->
+    <section id="ambience" class="relative py-32 px-6 md:px-12 bg-charcoal-light overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="text-burnt-orange text-xs font-semibold uppercase mb-4 animate-on-scroll"
+                    data-anim="fade-up">
+                    Experience
+                </div>
+                <h2 class="text-5xl md:text-6xl font-medium text-cream mb-6 animate-on-scroll font-newsreader italic"
+                    data-anim="fade-up" data-delay="0.1">
+                    Warm Atmosphere, <span class="text-cream/40">Timeless Moments</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="spotlight-card overflow-hidden rounded-sm animate-on-scroll" data-anim="fade-up"
+                    data-delay="0.2">
+                    <img src="https://images.unsplash.com/photo-1597310507193-fa27f71cd7d3"
+                        alt="Warm interior of Pizza Poetry restaurant with ambient lighting and comfortable seating"
+                        class="w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105">
+                </div>
+                <div class="spotlight-card overflow-hidden rounded-sm animate-on-scroll" data-anim="fade-up"
+                    data-delay="0.3">
+                    <img src="https://images.unsplash.com/photo-1709808547213-cb46e437c7f2"
+                        alt="Cozy dining area at Pizza Poetry with rustic wooden tables and soft lighting"
+                        class="w-full h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105">
+                </div>
+            </div>
+
+            <div class="mt-8 animate-on-scroll" data-anim="fade-up" data-delay="0.4">
+                <div class="spotlight-card overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1697056657100-06c2bcecefc4"
+                        alt="Full view of Pizza Poetry restaurant interior showing elegant ambience and dining setup"
+                        class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105">
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <p class="text-cream/60 max-w-2xl mx-auto leading-relaxed mb-8 animate-on-scroll" data-anim="fade-up"
+                    data-delay="0.5">
+                    Step into a space where warm lighting meets rustic elegance. Our carefully designed interior invites
+                    you to slow down, connect with loved ones, and savor every moment—just as much as every bite.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="relative py-32 px-6 md:px-12 bg-charcoal">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-on-scroll" data-anim="fade-up">
+                    <div class="text-burnt-orange text-xs font-semibold uppercase mb-6">
+                        Visit Us
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-medium text-cream mb-8 font-newsreader italic">
+                        Your Table <span class="text-cream/40">Awaits</span>
+                    </h2>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-sm bg-burnt-orange/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-burnt-orange">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-cream font-medium mb-2">Address</h3>
+                                <p class="text-cream/60 leading-relaxed">
+                                    2-3, Sangini Aspire, Pal RTO, Hazira Road<br>
+                                    Beside Sanskruti Township Pal<br>
+                                    Adajan, Surat, Gujarat 394510
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-sm bg-burnt-orange/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-burnt-orange">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-cream font-medium mb-2">Phone</h3>
+                                <a href="tel:06354045392"
+                                    class="text-burnt-orange hover:text-cream transition-colors text-lg">
+                                    0635 4045 392
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-sm bg-burnt-orange/10 flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-burnt-orange">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-cream font-medium mb-2">Hours</h3>
+                                <p class="text-cream/60">
+                                    Mon - Sun: 11:00 AM - 11:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://maps.app.goo.gl/b3P3qNkvmqsbR6kV7" target="_blank" rel="noopener"
+                            class="btn-primary">
+                            Get Directions
+                        </a>
+                        <a href="tel:06354045392" class="btn-secondary">
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll" data-anim="fade-up" data-delay="0.2">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2954.8914154684153!2d72.77422607412868!3d21.181957880505937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2e0b0e0e0b%3A0x0!2sPizza%20Poetry!5e0!3m2!1sen!2sin!4v1737772099283!5m2!1sen!2sin"
+                            width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-32 px-6 md:px-12 bg-charcoal-light overflow-hidden">
+        <div class="absolute inset-0 z-0 pointer-events-none"
+            style="background-image: radial-gradient(circle at center, rgba(217,119,6,0.15), transparent 70%);"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl md:text-7xl font-medium text-cream mb-8 animate-on-scroll font-newsreader italic"
+                data-anim="fade-up">
+                Your Table <span class="text-burnt-orange">Is Waiting</span>
+            </h2>
+            <p class="text-xl text-cream/60 mb-12 animate-on-scroll" data-anim="fade-up" data-delay="0.2">
+                Reserve your spot today and experience pizza like poetry.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 animate-on-scroll" data-anim="fade-up"
+                data-delay="0.4">
+                <a href="https://www.google.com/maps/reserve/v/dine/c/SbYn0kQzG3s" target="_blank" rel="noopener"
+                    class="btn-primary-large">
+                    Book a Table
+                </a>
+                <a href="tel:06354045392" class="btn-secondary-large">
+                    Call 0635 4045 392
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-charcoal border-t border-cream/5 overflow-hidden">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-16 border-b border-cream/5">
+
+                <!-- Column 1: Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-burnt-orange rounded-full flex items-center justify-center">
+                            <span class="text-charcoal font-bold">PP</span>
+                        </div>
+                        <span class="text-sm font-bold tracking-[0.2em] uppercase text-cream">Pizza Poetry</span>
+                    </div>
+                    <p class="text-sm text-cream/50 leading-relaxed mb-6">
+                        Where every slice tells a story. Experience artisan pizza crafted with passion in Adajan, Surat.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-xs font-semibold tracking-[0.2em] text-cream uppercase mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-sm text-cream/50 hover:text-cream transition-colors">About
+                                Us</a></li>
+                        <li><a href="#menu" class="text-sm text-cream/50 hover:text-cream transition-colors">Our
+                                Menu</a></li>
+                        <li><a href="#ambience"
+                                class="text-sm text-cream/50 hover:text-cream transition-colors">Ambience</a></li>
+                        <li><a href="#location" class="text-sm text-cream/50 hover:text-cream transition-colors">Visit
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div>
+                    <h4 class="text-xs font-semibold tracking-[0.2em] text-cream uppercase mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="text-sm text-cream/50">2-3, Sangini Aspire, Pal RTO<br>Adajan, Surat, Gujarat 394510
+                        </li>
+                        <li><a href="tel:06354045392"
+                                class="text-sm text-burnt-orange hover:text-cream transition-colors">0635 4045 392</a>
+                        </li>
+                        <li class="text-sm text-cream/50">Mon - Sun: 11:00 AM - 11:00 PM</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 py-8">
+                <div class="text-xs text-cream/30">
+                    © 2026 Pizza Poetry. All rights reserved.
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://maps.app.goo.gl/b3P3qNkvmqsbR6kV7" target="_blank" rel="noopener"
+                        class="text-xs text-cream/50 hover:text-cream transition-colors">Directions</a>
+                    <a href="https://www.google.com/maps/reserve/v/dine/c/SbYn0kQzG3s" target="_blank" rel="noopener"
+                        class="text-xs text-cream/50 hover:text-cream transition-colors">Reserve</a>
+                    <a href="https://www.google.com/viewer/chooseprovider?mid=/g/11lnplk_28&orderType=1" target="_blank"
+                        rel="noopener" class="text-xs text-cream/50 hover:text-cream transition-colors">Order Online</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Initialize GSAP animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Vertical Cut Reveal
+        function initVerticalCutReveal() {
+            const elements = document.querySelectorAll('.vertical-cut-reveal');
+            elements.forEach(el => {
+                const text = el.textContent.trim();
+                const words = text.split(' ');
+                el.innerHTML = '';
+
+                words.forEach((word, wordIdx) => {
+                    const wordSpan = document.createElement('span');
+                    wordSpan.className = 'vcr-word';
+
+                    const chars = Array.from(word);
+                    chars.forEach((char) => {
+                        const charWrapper = document.createElement('span');
+                        charWrapper.className = 'vcr-char-wrapper';
+
+                        const charSpan = document.createElement('span');
+                        charSpan.className = 'vcr-char';
+                        charSpan.textContent = char;
+
+                        charWrapper.appendChild(charSpan);
+                        wordSpan.appendChild(charWrapper);
+                    });
+
+                    el.appendChild(wordSpan);
+
+                    if (wordIdx < words.length - 1) {
+                        el.appendChild(document.createTextNode(' '));
+                    }
+                });
+            });
+        }
+
+        // Scroll Animations
+        document.addEventListener("DOMContentLoaded", () => {
+            initVerticalCutReveal();
+
+            // Set initial state
+            gsap.set(".animate-on-scroll", { opacity: 0, y: 40 });
+
+            // Vertical Cut Reveal Animation
+            document.querySelectorAll('.vertical-cut-reveal').forEach(el => {
+                const chars = el.querySelectorAll('.vcr-char');
+                gsap.set(chars, { y: '100%' });
+
+                gsap.to(chars, {
+                    y: '0%',
+                    duration: 0.8,
+                    ease: "power3.out",
+                    stagger: 0.02,
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                    }
+                });
+            });
+
+            // Scroll-triggered animations
+            window.addEventListener("load", () => {
+                requestAnimationFrame(() => {
+                    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+                        const rect = el.getBoundingClientRect();
+                        const isVisible = rect.top < window.innerHeight * 0.8;
+
+                        if (isVisible) {
+                            gsap.set(el, { opacity: 1, y: 0 });
+                        } else {
+                            gsap.to(el, {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.8,
+                                scrollTrigger: {
+                                    trigger: el,
+                                    start: "top 80%"
+                                }
+                            });
+                        }
+                    });
+                    ScrollTrigger.refresh();
+                });
+            });
+
+            // Spotlight Card Effect
+            const cards = document.querySelectorAll(".spotlight-card");
+            document.addEventListener("mousemove", (e) => {
+                cards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty("--mouse-x", `${x}px`);
+                    card.style.setProperty("--mouse-y", `${y}px`);
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+
+</html>
